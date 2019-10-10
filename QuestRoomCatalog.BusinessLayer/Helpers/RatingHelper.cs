@@ -17,14 +17,38 @@ namespace QuestRoomCatalog.BusinessLayer.Helpers
             Db = uow;
         }
 
-        public void Create(RatingBO bo)
+        public void Create(RatingBO objBO)
         {
-            if (bo.Id == 0)
+            if (objBO.Id == 0)
             {
-                Rating ratingRooms = AutoMapper<RatingBO, Rating>.Map(bo);
+                Rating ratingRooms = AutoMapper<RatingBO, Rating>.Map(objBO);
                 Db.RatingUowRepository.Add(ratingRooms);
                 Db.Save();
             }
-        }  
+        }
+
+        public void Update(RatingBO objBO)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(RatingBO objBO)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Save()
+        {
+            Db.Save();       
+        }   
+        public IEnumerable<RatingBO>  GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public RatingBO Get(int? id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

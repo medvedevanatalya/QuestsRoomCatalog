@@ -18,14 +18,49 @@ namespace QuestRoomCatalog.BusinessLayer.Helpers
             Db = uow;
         }
 
-        public void Create(QuestsLogosBO Bo)
+        public void Create(QuestsLogosBO objBO)
         {
-            if (Bo.Id == 0)
+            if (objBO.Id == 0)
             {
-                QuestsLogos questLogos = AutoMapper<QuestsLogosBO, QuestsLogos>.Map(Bo);
+                QuestsLogos questLogos = AutoMapper<QuestsLogosBO, QuestsLogos>.Map(objBO);
                 Db.QuestsLogosUowRepository.Add(questLogos);
                 Db.Save();
             }   
-        }  
+        }
+
+        public void Update(QuestsLogosBO objBO)
+        {
+            if (objBO.Id != 0)
+            {
+                QuestsLogos questLogos = AutoMapper<QuestsLogosBO, QuestsLogos>.Map(objBO);
+                Db.QuestsLogosUowRepository.Update(questLogos);
+                Db.Save();
+            }
+        }
+
+        public void Delete(QuestsLogosBO objBO)
+        {
+            if (objBO.Id != 0)
+            {
+                QuestsLogos questLogos = AutoMapper<QuestsLogosBO, QuestsLogos>.Map(objBO);
+                Db.QuestsLogosUowRepository.Delete(objBO.Id);
+                Db.Save();
+            }
+        }
+
+        public void Save()
+        {
+            Db.Save();        
+        }
+
+        public IEnumerable<QuestsLogosBO>  GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public QuestsLogosBO Get(int? id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -16,14 +16,39 @@ namespace QuestRoomCatalog.BusinessLayer.Helpers
         {
             Db = uow;
         }
-        public void Create(UsersBO bo)
+        public void Create(UsersBO objBO)
         {
-            if (bo.Id == 0)
+            if (objBO.Id == 0)
             {
-                Users usersRooms = AutoMapper<UsersBO, Users>.Map(bo);
+                Users usersRooms = AutoMapper<UsersBO, Users>.Map(objBO);
                 Db.UsersUowRepository.Add(usersRooms);
                 Db.Save();
             }
+        }
+
+        public void Update(UsersBO objBO)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(UsersBO objBO)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Save()
+        {
+            Db.Save();    
+        }
+
+        public IEnumerable<UsersBO> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public UsersBO Get(int? id)
+        {
+            throw new NotImplementedException();
         }
     }
 }  

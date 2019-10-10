@@ -21,6 +21,8 @@ namespace QuestRoomCatalog.Controllers
         // GET: QuestsRooms
         public ActionResult Index()
         {
+
+
             return View();
         }
 
