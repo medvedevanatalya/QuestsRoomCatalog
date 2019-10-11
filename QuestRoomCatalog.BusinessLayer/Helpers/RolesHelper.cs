@@ -32,7 +32,7 @@ namespace QuestRoomCatalog.BusinessLayer.Helpers
             throw new NotImplementedException();
         }
 
-        public void Delete(RolesBO objBO)
+        public void Delete(int id)
         {
             throw new NotImplementedException();
         }

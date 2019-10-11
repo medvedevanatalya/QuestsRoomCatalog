@@ -19,10 +19,10 @@ namespace QuestRoomCatalog.DataLayer
 
         [Required]
         [StringLength(250)]
-        public string NameQuestsRooms { get; set; }
+        public string Name { get; set; }
 
         [Required]
-        public string DecriptionQuestsRooms { get; set; }
+        public string Decription { get; set; }
 
         public int TimeForQuest { get; set; }
 
@@ -30,9 +30,9 @@ namespace QuestRoomCatalog.DataLayer
 
         public int MinGamer { get; set; }
 
-        public int FearsLevel { get; set; }
+        public int FearLevel { get; set; }
 
-        public int ComplexitysLevel { get; set; }
+        public int ComplexityLevel { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<QuestsLogos> QuestsLogos { get; set; }

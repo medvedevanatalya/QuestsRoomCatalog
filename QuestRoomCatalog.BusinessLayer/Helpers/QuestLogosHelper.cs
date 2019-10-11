@@ -38,14 +38,10 @@ namespace QuestRoomCatalog.BusinessLayer.Helpers
             }
         }
 
-        public void Delete(QuestsLogosBO objBO)
+        public void Delete(int id)
         {
-            if (objBO.Id != 0)
-            {
-                QuestsLogos questLogos = AutoMapper<QuestsLogosBO, QuestsLogos>.Map(objBO);
-                Db.QuestsLogosUowRepository.Delete(objBO.Id);
-                Db.Save();
-            }
+            Db.QuestsLogosUowRepository.Delete(id);
+            Db.Save();
         }
 
         public void Save()
@@ -53,14 +49,19 @@ namespace QuestRoomCatalog.BusinessLayer.Helpers
             Db.Save();        
         }
 
-        public IEnumerable<QuestsLogosBO>  GetAll()
+        public IEnumerable<QuestsLogosBO> GetAll()
         {
-            throw new NotImplementedException();
+            var all = AutoMapper<IEnumerable<QuestsLogos>, List<QuestsLogosBO>>.Map(Db.QuestsLogosUowRepository.GetAll);
+            return all; 
         }
 
         public QuestsLogosBO Get(int? id)
         {
-            throw new NotImplementedException();
+            if (id != 0)
+            {
+                return AutoMapper<QuestsLogos, QuestsLogosBO>.Map(Db.QuestsLogosUowRepository.Get((int)id));
+            }
+            return new QuestsLogosBO();
         }
     }
 }

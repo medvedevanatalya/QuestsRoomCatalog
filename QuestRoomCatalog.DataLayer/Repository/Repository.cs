@@ -1,5 +1,4 @@
-﻿using QuestRoomCatalog.DataLayer.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -42,7 +41,8 @@ namespace QuestRoomCatalog.DataLayer.Repository
 
         public IEnumerable<T> GetAll()
         {
-            return table.ToList();
+            List<T> questsLogos = table.ToList();
+            return questsLogos;
         }
 
         public void Save()

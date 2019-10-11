@@ -13,7 +13,7 @@ namespace QuestRoomCatalog.BusinessLayer.Helpers
     {          
         void Create(T objBO);
         void Update(T objBO);
-        void Delete(T objBO);
+        void Delete(int id);
         void Save();
         IEnumerable<T> GetAll();
         T Get(int? id);  

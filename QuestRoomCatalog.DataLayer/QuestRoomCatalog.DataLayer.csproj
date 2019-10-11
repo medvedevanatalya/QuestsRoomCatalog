@@ -67,7 +67,6 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Entities\C__MigrationHistory.cs" />
     <Compile Include="Entities\Model1.cs" />
-    <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Migrations\201909261333084_CreateDatabase.cs" />
     <Compile Include="Migrations\201909261333084_CreateDatabase.Designer.cs">
       <DependentUpon>201909261333084_CreateDatabase.cs</DependentUpon>
@@ -75,6 +74,10 @@
     <Compile Include="Migrations\201910071304060_DeleteImage.cs" />
     <Compile Include="Migrations\201910071304060_DeleteImage.Designer.cs">
       <DependentUpon>201910071304060_DeleteImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910111423361_UpdateColumn.cs" />
+    <Compile Include="Migrations\201910111423361_UpdateColumn.Designer.cs">
+      <DependentUpon>201910111423361_UpdateColumn.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,8 +102,13 @@
     <EmbeddedResource Include="Migrations\201910071304060_DeleteImage.resx">
       <DependentUpon>201910071304060_DeleteImage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910111423361_UpdateColumn.resx">
+      <DependentUpon>201910111423361_UpdateColumn.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
