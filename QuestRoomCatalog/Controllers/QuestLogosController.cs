@@ -24,7 +24,7 @@ namespace QuestRoomCatalog.Controllers
         public ActionResult Index()
         {
             //var list = AutoMapper<IEnumerable<QuestsLogosBO>, List<QuestsLogosViewModel>>.Map(questLogosBO.GetAll().ToList());
-                var objBO = AutoMapper<IEnumerable<QuestsLogosBO>,IEnumerable<QuestsLogosViewModel>>.Map(questLogosBO.GetAll());
+                //var objBO = AutoMapper<IEnumerable<QuestsLogosBO>,IEnumerable<QuestsLogosViewModel>>.Map(questLogosBO.GetAll());
             //var objBO = AutoMapper<List<QuestsLogosViewModel>, IEnumerable<QuestsLogosBO>>.Map(questLogosBO.GetAll);
 
             return View();

@@ -19,14 +19,14 @@ namespace QuestRoomCatalog.DataLayer.Migrations
         
         public override void Down()
         {
-            AddColumn("dbo.QuestsRooms", "ComplexitysLevel", c => c.Int(nullable: false));
-            AddColumn("dbo.QuestsRooms", "FearsLevel", c => c.Int(nullable: false));
-            AddColumn("dbo.QuestsRooms", "DecriptionQuestsRooms", c => c.String(nullable: false));
-            AddColumn("dbo.QuestsRooms", "NameQuestsRooms", c => c.String(nullable: false, maxLength: 250));
-            DropColumn("dbo.QuestsRooms", "ComplexityLevel");
-            DropColumn("dbo.QuestsRooms", "FearLevel");
-            DropColumn("dbo.QuestsRooms", "Decription");
-            DropColumn("dbo.QuestsRooms", "Name");
+            //AddColumn("dbo.QuestsRooms", "ComplexitysLevel", c => c.Int(nullable: false));
+            //AddColumn("dbo.QuestsRooms", "FearsLevel", c => c.Int(nullable: false));
+            //AddColumn("dbo.QuestsRooms", "DecriptionQuestsRooms", c => c.String(nullable: false));
+            //AddColumn("dbo.QuestsRooms", "NameQuestsRooms", c => c.String(nullable: false, maxLength: 250));
+            //DropColumn("dbo.QuestsRooms", "ComplexityLevel");
+            //DropColumn("dbo.QuestsRooms", "FearLevel");
+            //DropColumn("dbo.QuestsRooms", "Decription");
+            //DropColumn("dbo.QuestsRooms", "Name");
         }
     }
 }

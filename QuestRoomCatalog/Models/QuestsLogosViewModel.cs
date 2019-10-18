@@ -13,8 +13,8 @@
         public int QuestRoomId { get; set; }
 
         //[Required]
-        //[Display(Name = "Изображение")]
-        //public byte[] Image { get; set; }
+        [Display(Name = "Изображение")]
+        public byte[] Image { get; set; }
 
         public bool IsLogo { get; set; }
 

@@ -14,7 +14,7 @@ namespace QuestRoomCatalog.DataLayer
 
         //[Required]
         //[MaxLength(1)]
-        //public byte[] Image { get; set; }
+        public byte[] Image { get; set; }
 
         public bool IsLogo { get; set; }
 

@@ -40,9 +40,9 @@ namespace QuestRoomCatalog.DataLayer
                 .WithRequired(e => e.AspNetUsers)
                 .HasForeignKey(e => e.UserId);
 
-            //modelBuilder.Entity<QuestsLogos>()
-            //    .Property(e => e.Image)
-            //    .IsFixedLength();
+            modelBuilder.Entity<QuestsLogos>()
+                .Property(e => e.Image)
+                .IsFixedLength();
 
             modelBuilder.Entity<QuestsRooms>()
                 .HasMany(e => e.QuestsLogos)

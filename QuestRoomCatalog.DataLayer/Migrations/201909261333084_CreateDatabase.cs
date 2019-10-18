@@ -77,7 +77,7 @@ namespace QuestRoomCatalog.DataLayer.Migrations
                 {
                     Id = c.Int(nullable: false, identity: true),
                     QuestRoomId = c.Int(nullable: false),
-                    //Image = c.Binary(nullable: false, maxLength: 1, fixedLength: true),
+                    Image = c.Binary(nullable: false, maxLength: 1, fixedLength: true),
                     IsLogo = c.Boolean(nullable: false),
                 })
                 .PrimaryKey(t => t.Id)
@@ -90,10 +90,11 @@ namespace QuestRoomCatalog.DataLayer.Migrations
                 {
                     Id = c.Int(nullable: false, identity: true),
                     Name = c.String(nullable: false, maxLength: 250),
-                    Decription = c.String(nullable: false),
+                    Description = c.String(nullable: false),
                     TimeForQuest = c.Int(nullable: false),
                     MaxGamer = c.Int(nullable: false),
                     MinGamer = c.Int(nullable: false),
+                    MinAgeGamer = c.Int(nullable: false),
                     FearLevel = c.Int(nullable: false),
                     ComplexityLevel = c.Int(nullable: false),
                 })
@@ -169,7 +170,7 @@ namespace QuestRoomCatalog.DataLayer.Migrations
             DropTable("dbo.Rating");
             DropTable("dbo.QuestsRooms");
             DropTable("dbo.QuestsLogos");
-            DropTable("dbo.__MigrationHistory");
+            //DropTable("dbo.__MigrationHistory");
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");

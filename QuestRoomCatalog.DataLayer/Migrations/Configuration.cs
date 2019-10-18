@@ -9,7 +9,7 @@ namespace QuestRoomCatalog.DataLayer.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(QuestRoomCatalog.DataLayer.Model1 context)

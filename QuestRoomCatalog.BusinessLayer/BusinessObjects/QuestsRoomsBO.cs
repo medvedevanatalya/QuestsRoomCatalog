@@ -11,6 +11,7 @@ namespace QuestRoomCatalog.BusinessLayer.BusinessObjects
         public int TimeForQuest { get; set; }      
         public int MaxGamer { get; set; }     
         public int MinGamer { get; set; }    
+        public int MinAgeGamer { get; set; }
         public int FearsLevel { get; set; }   
         public int ComplexitysLevel { get; set; }     
     }

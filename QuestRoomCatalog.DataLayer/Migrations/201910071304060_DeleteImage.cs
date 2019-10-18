@@ -7,12 +7,12 @@ namespace QuestRoomCatalog.DataLayer.Migrations
     {
         public override void Up()
         {
-            DropColumn("dbo.QuestsLogos", "Image");
+            //DropColumn("dbo.QuestsLogos", "Image");
         }
         
         public override void Down()
         {
-            AddColumn("dbo.QuestsLogos", "Image", c => c.Binary(nullable: false, maxLength: 1, fixedLength: true));
+            //AddColumn("dbo.QuestsLogos", "Image", c => c.Binary(nullable: false, maxLength: 1, fixedLength: true));
         }
     }
 }
