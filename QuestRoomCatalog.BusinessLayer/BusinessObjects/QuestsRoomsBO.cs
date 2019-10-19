@@ -6,13 +6,13 @@ namespace QuestRoomCatalog.BusinessLayer.BusinessObjects
     public class QuestsRoomsBO
     {   
         public int Id { get; set; }
-        public string NameQuestsRooms { get; set; }  
-        public string DecriptionQuestsRooms { get; set; }  
+        public string Name { get; set; }  
+        public string Description { get; set; }  
         public int TimeForQuest { get; set; }      
         public int MaxGamer { get; set; }     
         public int MinGamer { get; set; }    
         public int MinAgeGamer { get; set; }
-        public int FearsLevel { get; set; }   
-        public int ComplexitysLevel { get; set; }     
+        public int FearLevel { get; set; }   
+        public int ComplexityLevel { get; set; }     
     }
 }

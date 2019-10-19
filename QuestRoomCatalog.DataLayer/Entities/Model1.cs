@@ -10,6 +10,7 @@ namespace QuestRoomCatalog.DataLayer
         public Model1()
             : base("name=Model1")
         {
+            Database.SetInitializer<Model1>(new Initializer());
         }
 
         public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
